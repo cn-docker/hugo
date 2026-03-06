@@ -48,7 +48,7 @@ jobs:
             ${{ vars.REGISTRY_GITHUB }}/${{ github.repository }}
 
       - name: Build and push image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           context: .
           push: true
