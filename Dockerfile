@@ -2,7 +2,7 @@ FROM golang:1.27-trixie
 LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 
 # renovate: datasource=github-releases depName=gohugoio/hugo
-ARG HUGO_VERSION=v0.165.0
+ARG HUGO_VERSION=v0.166.0
 # renovate: datasource=github-releases depName=sass/dart-sass
 ARG DART_SASS_VERSION=1.104.0
 
