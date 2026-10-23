@@ -23,6 +23,12 @@ jobs:
           images: |
             ${{ vars.DOCKER_ORGANIZATION }}/${{ env.IMAGE_NAME }}
             ${{ vars.REGISTRY_GITHUB }}/${{ github.repository }}
+      - name: Login to GitHub registry
+        uses: docker/login-action@v4
+        with:
+          registry: ${{ vars.REGISTRY_GITHUB }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build image
         uses: docker/build-push-action@v7
         with:
